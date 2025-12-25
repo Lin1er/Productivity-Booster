@@ -395,8 +395,8 @@ func (p *DashboardPage) View() string {
 	}
 
 	// Hero section with key stats
-	heroText := fmt.Sprintf("🎯 %s • Pending: %d • Overdue: %d • Today: %d",
-		now.Format("Mon, Jan 2"),
+	heroText := fmt.Sprintf("✨ %s • %d tasks pending • %d overdue • %d due today",
+		now.Format("Monday, January 2, 2006"),
 		pendingTodos,
 		overdueTodos,
 		todayTodos)
@@ -451,7 +451,7 @@ func (p *DashboardPage) View() string {
 	// Help text
 	helpText := lipgloss.NewStyle().
 		Foreground(lipgloss.Color("240")).
-		Render("tab: switch focus | a: quick add | ↑/↓: navigate | q: quit")
+		Render("✨ Tab: switch cards • a: quick add • ↑/↓: browse • Enter: go to page • q: quit")
 
 	// Assemble view
 	return lipgloss.JoinVertical(lipgloss.Left,

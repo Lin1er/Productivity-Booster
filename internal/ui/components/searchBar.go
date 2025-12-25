@@ -31,7 +31,7 @@ type SearchBar struct {
 
 func NewSearchBar() *SearchBar {
 	input := textinput.New()
-	input.Placeholder = "Search... (Esc to close, Tab for filters)"
+	input.Placeholder = "🔍 Type to search... (Esc to close, Tab for filters)"
 	input.CharLimit = 100
 	input.Width = 60
 
@@ -114,28 +114,28 @@ func (s *SearchBar) View() string {
 
 	switch s.filter {
 	case FilterPending:
-		filterLabel = "Pending"
+		filterLabel = "📋 Pending Only"
 		filterColor = "214"
 	case FilterCompleted:
-		filterLabel = "Completed"
+		filterLabel = "✅ Completed"
 		filterColor = "46"
 	case FilterHighPriority:
-		filterLabel = "High Priority"
+		filterLabel = "🔥 High Priority"
 		filterColor = "196"
 	case FilterMediumPriority:
-		filterLabel = "Medium Priority"
+		filterLabel = "📌 Medium Priority"
 		filterColor = "214"
 	case FilterLowPriority:
-		filterLabel = "Low Priority"
+		filterLabel = "💤 Low Priority"
 		filterColor = "45"
 	case FilterToday:
-		filterLabel = "Due Today"
+		filterLabel = "📅 Due Today"
 		filterColor = "45"
 	case FilterOverdue:
-		filterLabel = "Overdue"
+		filterLabel = "⚠️  Overdue"
 		filterColor = "196"
 	default:
-		filterLabel = "No Filter"
+		filterLabel = "🌍 All Items"
 		filterColor = "240"
 	}
 
