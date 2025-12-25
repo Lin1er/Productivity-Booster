@@ -352,7 +352,7 @@ func (p *DashboardPage) SetSize(width, height int) {
 
 	// Calculate card dimensions
 	cardWidth := (width - 8) / 3
-	cardHeight := height - 8
+	cardHeight := height - 7
 
 	p.todoList.SetSize(cardWidth-2, cardHeight)
 	p.eventList.SetSize(cardWidth-2, cardHeight)
